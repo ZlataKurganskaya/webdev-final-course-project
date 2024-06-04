@@ -1,0 +1,37 @@
+@media screen and (max-width: 480px) {
+  .article {
+    height: auto;
+
+    &__container {
+      max-width: 480px;
+      margin: 0;
+
+      h1 {
+        font-size: 38px;
+        line-height: 55px;
+        margin-top: 100px;
+      }
+
+      h2 {
+        font-size: 22px;
+        line-height: 32px;
+        margin-top: 40px;
+      }
+    }
+
+    &__columns {
+      column-count: 1;
+      column-gap: 0px;
+
+      p {
+        padding-left: 20px;
+        padding-top: 20px;
+      }
+    }
+
+    &__button {
+      margin-top: 45px;
+      margin-bottom: 90px;
+    }
+  }
+}

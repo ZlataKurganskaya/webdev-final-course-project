@@ -1,0 +1,100 @@
+@import 'kit/mixins';
+@import 'kit/variables';
+
+.wrapper {
+  display: none;
+  width: 320px;
+  background-color: #000000;
+  position: relative;
+  color: $white;
+  height: 40px;
+  left: 130px;
+  bottom: 35px;
+  z-index: 1000;
+}
+
+#checkbox-menu {
+  display: none;
+}
+
+label {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 2;
+  line-height: 40px;
+}
+
+.burger-line {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 35px;
+  height: 2px;
+  background-color: $white;
+  transition: $trans;
+}
+
+.two .three {
+  top: 18px;
+}
+
+.four {
+  top: 28px;
+}
+
+.main__menu {
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%);
+  max-height: 0;
+  font-size: 0;
+  overflow: hidden;
+  transition: $trans;
+
+  a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    color: $white;
+    text-decoration: none;
+    border-top: 1px solid $white;
+    background-color: $bluish;
+    font-family: 'Roboto', sans-serif;
+    @include text-shadow(0, 0, 10px, rgba(0, 0, 0, 0.5));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    display: block;
+  }
+}
+
+#checkbox-menu:checked ~ .main__menu {
+  max-height: 500px;
+  font-size: 16px;
+}
+
+#checkbox-menu:checked ~ .one {
+  display: none;
+}
+
+#checkbox-menu:checked ~ .two {
+  transform: rotate(45deg);
+}
+
+#checkbox-menu:checked ~ .three {
+  transform: rotate(-45deg);
+}
+
+#checkbox-menu:checked ~ .four {
+  display: none;
+}

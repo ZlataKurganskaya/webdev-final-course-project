@@ -1,0 +1,34 @@
+@import 'kit/mixins';
+@import 'kit/variables';
+
+.header {
+  &__nav {
+    @include main-font-style;
+    font-size: 14px;
+
+    &--list {
+      display: flex;
+      list-style: none;
+      padding: 0;
+    }
+
+    &--item {
+      margin-right: 15px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &--link {
+      @include link-style;
+      padding: 15px;
+      letter-spacing: 4px;
+
+      &:hover {
+        color: $bluish;
+        border-bottom: 2px solid $bluish;
+      }
+    }
+  }
+}

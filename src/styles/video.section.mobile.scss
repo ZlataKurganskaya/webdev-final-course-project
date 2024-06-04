@@ -1,0 +1,26 @@
+@import 'kit/variables';
+@import 'kit/mixins';
+
+@media screen and (max-width: 480px) {
+  .video {
+    max-width: 480px;
+
+    &__container {
+      background: url(../assets/bg_video_section_mobile.png);
+    }
+
+    p {
+      padding-top: 0;
+    }
+
+    h1 {
+      font-family: 'Nerko One', cursive;
+      font-size: 40px;
+      font-weight: 400;
+    }
+
+    &__element {
+      border: none;
+    }
+  }
+}

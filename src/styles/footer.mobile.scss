@@ -1,0 +1,47 @@
+@media screen and (max-width: 480px) {
+  .footer {
+    &__container {
+      height: 300px;
+      max-width: 480px;
+      display: block;
+    }
+
+    &__firstcol {
+      text-align: center;
+      margin: 0;
+      padding-top: 15px;
+      opacity: 1;
+    }
+
+    &__secondcol {
+      display: block;
+      text-align: center;
+      padding: 0;
+      padding-top: 20px;
+
+      &--adress {
+        margin: 0;
+        text-align: center;
+        padding-top: 10px;
+        opacity: 1;
+
+        br {
+          display: none;
+        }
+      }
+
+      &--mail {
+        opacity: 1;
+      }
+    }
+
+    &__thirdcol {
+      &--copyright {
+        margin: 0;
+        text-align: center;
+        padding-top: 20px;
+        opacity: 1;
+      }
+    }
+  }
+}
